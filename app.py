@@ -1,9 +1,10 @@
 from flask import Flask, request,jsonify, render_template
+from flask_cors import CORS
 import  json
 import sqlite3
 
 app = Flask(__name__)
-
+CORS(app)
 #an in memory students storage(using a list)
 #students = []
 #instead of a list,we need to create a connection to database where we store students
